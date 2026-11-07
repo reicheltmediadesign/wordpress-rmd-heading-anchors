@@ -1,0 +1,62 @@
+# German translation of RMD Heading Anchors (formal "Sie").
+msgid ""
+msgstr ""
+"Project-Id-Version: RMD Heading Anchors 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/reicheltmediadesign/wordpress-rmd-heading-anchors/issues\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: rmd-heading-anchors\n"
+
+msgid "Gives every heading in the content an automatic anchor ID, so sections can be linked directly: readable, umlauts spelled out, filler words removed."
+msgstr "Gibt jeder Überschrift im Inhalt automatisch eine Anker-ID, damit sich Abschnitte direkt verlinken lassen: gut lesbar, Umlaute ausgeschrieben, Füllwörter entfernt."
+
+msgid "RMD Heading Anchors requires PHP %1$s or newer. This site runs PHP %2$s, so the plugin stays inactive."
+msgstr "RMD Heading Anchors benötigt PHP %1$s oder neuer. Diese Website läuft mit PHP %2$s, daher bleibt das Plugin inaktiv."
+
+msgid "Heading anchors"
+msgstr "Überschriften-Anker"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "You are not allowed to access this page."
+msgstr "Sie dürfen diese Seite nicht aufrufen."
+
+msgid "Headings in the content get an ID automatically, so you can link to a section with #id. Headings that already have an ID (for example from the \"HTML anchor\" field in the block editor) keep it."
+msgstr "Überschriften im Inhalt erhalten automatisch eine ID, sodass Sie mit #id auf einen Abschnitt verlinken können. Überschriften, die bereits eine ID haben (z. B. aus dem Feld „HTML-Anker“ im Block-Editor), behalten diese."
+
+msgid "Heading levels"
+msgstr "Überschriftenebenen"
+
+msgid "H1 is usually the page title and not part of the content."
+msgstr "H1 ist meist der Seitentitel und nicht Teil des Inhalts."
+
+msgid "Filler words"
+msgstr "Füllwörter"
+
+msgid "Leave filler words out of the IDs"
+msgstr "Füllwörter in den IDs weglassen"
+
+msgid "A heading made only of filler words keeps them. Built-in list:"
+msgstr "Besteht eine Überschrift nur aus Füllwörtern, bleiben sie erhalten. Eingebaute Liste:"
+
+msgid "More filler words"
+msgstr "Weitere Füllwörter"
+
+msgid "Separated by commas, spaces or line breaks. Only used when filler words are left out."
+msgstr "Getrennt durch Kommas, Leerzeichen oder Zeilenumbrüche. Wirkt nur, wenn Füllwörter weggelassen werden."
+
+msgid "About us & our services"
+msgstr "Über uns & unsere Leistungen"
+
+msgid "Examples with the saved settings"
+msgstr "Beispiele mit den gespeicherten Einstellungen"
+
+msgid "Heading"
+msgstr "Überschrift"
+
+msgid "Anchor"
+msgstr "Anker"
