@@ -17,7 +17,6 @@
 	const { createHigherOrderComponent } = wp.compose;
 	const { useSelect } = wp.data;
 
-	const DOMAIN = 'rmd-heading-anchors';
 	const PATH = '/rmd-heading-anchors/v1/anchors';
 	const DELAY = 400;
 	const LEVELS = ( config && Array.isArray( config.levels ) ) ? config.levels : [];
@@ -104,29 +103,29 @@
 
 		let help;
 		if ( anchor !== '' ) {
-			help = __( 'The heading keeps this anchor when its text changes.', DOMAIN );
+			help = __( 'The heading keeps this anchor when its text changes.', 'rmd-heading-anchors' );
 		} else if ( error ) {
 			/* translators: %s: error message */
-			help = sprintf( __( 'The automatic anchor could not be determined: %s', DOMAIN ), error );
+			help = sprintf( __( 'The automatic anchor could not be determined: %s', 'rmd-heading-anchors' ), error );
 		} else if ( ids === null ) {
-			help = __( 'Determining the automatic anchor …', DOMAIN );
+			help = __( 'Determining the automatic anchor …', 'rmd-heading-anchors' );
 		} else if ( automatic !== '' ) {
 			/* translators: %s: anchor ID */
-			help = sprintf( __( 'Automatic anchor: #%s. It changes when the heading text changes.', DOMAIN ), automatic );
+			help = sprintf( __( 'Automatic anchor: #%s. It changes when the heading text changes.', 'rmd-heading-anchors' ), automatic );
 		} else if ( ! LEVELS.includes( level ) ) {
 			/* translators: %d: heading level (1–6) */
-			help = sprintf( __( 'H%d headings get no automatic anchor (Settings → Heading anchors).', DOMAIN ), level );
+			help = sprintf( __( 'H%d headings get no automatic anchor (Settings → Heading anchors).', 'rmd-heading-anchors' ), level );
 		} else {
-			help = __( 'The heading has no text an automatic anchor could be made of.', DOMAIN );
+			help = __( 'The heading has no text an automatic anchor could be made of.', 'rmd-heading-anchors' );
 		}
 
 		return el(
 			PanelBody,
-			{ title: __( 'Anchor', DOMAIN ), initialOpen: true },
+			{ title: __( 'Anchor', 'rmd-heading-anchors' ), initialOpen: true },
 			el( TextControl, {
 				__nextHasNoMarginBottom: true,
 				__next40pxDefaultSize: true,
-				label: __( 'Fixed anchor', DOMAIN ),
+				label: __( 'Fixed anchor', 'rmd-heading-anchors' ),
 				value: anchor,
 				placeholder: automatic,
 				help,
@@ -136,7 +135,7 @@
 			duplicate && el(
 				Notice,
 				{ status: 'warning', isDismissible: false },
-				__( 'Another heading in this post uses the same anchor.', DOMAIN )
+				__( 'Another heading in this post uses the same anchor.', 'rmd-heading-anchors' )
 			),
 			anchor === '' && automatic !== '' && el(
 				Button,
@@ -145,7 +144,7 @@
 					__next40pxDefaultSize: true,
 					onClick: () => setAttributes( { anchor: automatic } ),
 				},
-				__( 'Fix automatic anchor', DOMAIN )
+				__( 'Fix automatic anchor', 'rmd-heading-anchors' )
 			),
 			anchor !== '' && el(
 				Button,
@@ -154,7 +153,7 @@
 					__next40pxDefaultSize: true,
 					onClick: () => setAttributes( { anchor: undefined } ),
 				},
-				__( 'Use automatic anchor', DOMAIN )
+				__( 'Use automatic anchor', 'rmd-heading-anchors' )
 			)
 		);
 	}
