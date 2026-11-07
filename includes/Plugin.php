@@ -29,6 +29,7 @@ final class Plugin {
 		Settings::init();
 
 		Modules\ContentAnchors::init();
+		Modules\EditorPanel::init();
 
 		if ( is_admin() ) {
 			Admin\SettingsPage::init();

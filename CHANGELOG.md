@@ -5,6 +5,13 @@ All notable changes to this plugin are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.2.0] – 2026-11-07
+
+### Added
+
+- Block editor: "Anchor" panel in the settings of every heading block. Shows the automatic anchor (computed by the server with the same code as the output), fixes it with one click or takes an own anchor, and warns when two headings use the same anchor. Fixed anchors are stored in the block's `anchor` attribute (*HTML anchor*) and stay when the heading text changes.
+- REST route `rmd-heading-anchors/v1/anchors` (POST, `edit_posts`) for the panel.
+
 ## [0.1.0] – 2026-11-07
 
 ### Added

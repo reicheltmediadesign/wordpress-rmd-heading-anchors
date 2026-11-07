@@ -1,7 +1,7 @@
 # German translation of RMD Heading Anchors (formal "Sie").
 msgid ""
 msgstr ""
-"Project-Id-Version: RMD Heading Anchors 0.1.0\n"
+"Project-Id-Version: RMD Heading Anchors 0.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/reicheltmediadesign/wordpress-rmd-heading-anchors/issues\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -60,3 +60,46 @@ msgstr "Überschrift"
 
 msgid "Anchor"
 msgstr "Anker"
+
+#: assets/js/editor-panel.js
+msgid "The heading keeps this anchor when its text changes."
+msgstr "Die Überschrift behält diesen Anker, auch wenn sich ihr Text ändert."
+
+#. translators: %s: error message
+#: assets/js/editor-panel.js
+msgid "The automatic anchor could not be determined: %s"
+msgstr "Der automatische Anker konnte nicht ermittelt werden: %s"
+
+#: assets/js/editor-panel.js
+msgid "Determining the automatic anchor …"
+msgstr "Automatischer Anker wird ermittelt …"
+
+#. translators: %s: anchor ID
+#: assets/js/editor-panel.js
+msgid "Automatic anchor: #%s. It changes when the heading text changes."
+msgstr "Automatischer Anker: #%s. Er ändert sich, wenn sich der Text der Überschrift ändert."
+
+#. translators: %d: heading level (1–6)
+#: assets/js/editor-panel.js
+msgid "H%d headings get no automatic anchor (Settings → Heading anchors)."
+msgstr "H%d-Überschriften erhalten keinen automatischen Anker (Einstellungen → Überschriften-Anker)."
+
+#: assets/js/editor-panel.js
+msgid "The heading has no text an automatic anchor could be made of."
+msgstr "Die Überschrift hat keinen Text, aus dem sich ein automatischer Anker bilden lässt."
+
+#: assets/js/editor-panel.js
+msgid "Fixed anchor"
+msgstr "Fester Anker"
+
+#: assets/js/editor-panel.js
+msgid "Another heading in this post uses the same anchor."
+msgstr "Eine andere Überschrift in diesem Beitrag verwendet denselben Anker."
+
+#: assets/js/editor-panel.js
+msgid "Fix automatic anchor"
+msgstr "Automatischen Anker festsetzen"
+
+#: assets/js/editor-panel.js
+msgid "Use automatic anchor"
+msgstr "Automatischen Anker verwenden"
