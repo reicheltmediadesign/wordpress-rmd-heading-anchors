@@ -62,6 +62,26 @@ final class HeadingAnchors {
 	}
 
 	/**
+	 * The ID every heading of the fragment has after {@see self::apply()}, in
+	 * document order; '' for headings that get none.
+	 *
+	 * @return list<string>
+	 */
+	public function ids( string $html ): array {
+		if ( ! preg_match_all( self::HEADING, $this->apply( $html ), $headings, PREG_SET_ORDER ) ) {
+			return [];
+		}
+
+		$ids = [];
+		foreach ( $headings as $heading ) {
+			$ids[] = 1 === preg_match( self::ID_ATTRIBUTE, $heading[2] ?? '', $id_match )
+				? ( $id_match[1] ?? '' ) . ( $id_match[2] ?? '' ) . ( $id_match[3] ?? '' )
+				: '';
+		}
+		return $ids;
+	}
+
+	/**
 	 * @return array<string, true>
 	 */
 	private static function existing_ids( string $html ): array {

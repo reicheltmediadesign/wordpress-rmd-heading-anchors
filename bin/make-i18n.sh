@@ -25,6 +25,8 @@ if [ -f "languages/$domain-de_DE.po" ]; then
 		"languages/$domain-de_DE.po" > "languages/$domain-de_DE_formal.po"
 fi
 
+# JSON files for the block editor script; --no-purge keeps its strings in the PO for make-mo/make-php.
+"$wp_bin" i18n make-json languages --no-purge
 "$wp_bin" i18n make-mo languages
 "$wp_bin" i18n make-php languages
 

@@ -66,6 +66,14 @@ final class HeadingAnchorsTest extends TestCase {
 		);
 	}
 
+	public function test_ids_in_document_order(): void {
+		$this->assertSame(
+			[ '', 'kontakt-2', 'kontakt', 'anfahrt', '' ],
+			$this->anchors()->ids( '<h1>Titel</h1><h2>Kontakt</h2><h2 id="kontakt">Alt</h2><h3>Die Anfahrt</h3><h2>★</h2>' )
+		);
+		$this->assertSame( [], $this->anchors()->ids( '<p>Text</p>' ) );
+	}
+
 	public function test_result_is_stable(): void {
 		$once = $this->anchors()->apply( '<h2>Kontakt</h2><h2>Kontakt</h2>' );
 		$this->assertSame( '<h2 id="kontakt">Kontakt</h2><h2 id="kontakt-2">Kontakt</h2>', $once );

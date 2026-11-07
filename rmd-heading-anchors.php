@@ -3,7 +3,7 @@
  * Plugin Name:       RMD Heading Anchors
  * Plugin URI:        https://github.com/reicheltmediadesign/wordpress-rmd-heading-anchors
  * Description:       Gives every heading in the content an automatic anchor ID, so sections can be linked directly: readable, umlauts spelled out, filler words removed.
- * Version:           0.1.0
+ * Version:           0.2.0
  * Requires at least: 6.8
  * Requires PHP:      8.1
  * Author:            Philipp Reichelt, reichelt media.design
@@ -21,7 +21,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'RMD_HA_VERSION', '0.1.0' );
+define( 'RMD_HA_VERSION', '0.2.0' );
 define( 'RMD_HA_FILE', __FILE__ );
 define( 'RMD_HA_DIR', plugin_dir_path( __FILE__ ) );
 define( 'RMD_HA_URL', plugin_dir_url( __FILE__ ) );
