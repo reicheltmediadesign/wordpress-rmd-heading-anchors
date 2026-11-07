@@ -15,6 +15,7 @@ WordPress-Plugin von reichelt media.design: automatische Anker-IDs für Übersch
 
 - PHP 8.1+, WP 6.8+. WordPress-Coding-Standards (`phpcs.xml.dist`), Methoden snake_case, Präfix `rmd_ha_` / `RMD_HA_` / Namespace `RMD\HeadingAnchors`, Textdomain `rmd-heading-anchors`.
 - Quellstrings Englisch, Übersetzung in `languages/rmd-heading-anchors-de_DE.po` (Sie-Form) von Hand nachziehen; `de_DE_formal` erzeugt `bin/make-i18n.sh` daraus (braucht WP-CLI; lokal nicht installiert, im Release-Workflow vorhanden).
+- Editor-Script `assets/js/editor-panel.js` (ohne Build, `wp.*`-Globals): Textdomain in `__()` immer als Literal `'rmd-heading-anchors'`, keine Konstante – sonst verwirft `wp i18n make-pot` die Strings und `make-json` erzeugt keine JSON-Übersetzungen (passiert beim ersten Tag von 0.2.0).
 - Version an drei Stellen: Plugin-Header, `RMD_HA_VERSION`, `readme.txt` (Stable tag). `bash bin/check-version.sh` prüft das.
 - Änderungen am Slug-Verfahren ändern IDs auf bestehenden Seiten und brechen Links: nur bewusst, im Changelog unter „Changed“ deutlich vermerken.
 
